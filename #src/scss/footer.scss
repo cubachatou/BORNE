@@ -1,0 +1,125 @@
+footer {}
+.back-to-top {
+  position: absolute;
+  top: 430px;
+  left: 0px;
+  padding-right: 55px;
+  transform: rotate(-90deg);
+  font-size: 18px;
+  cursor: pointer;
+  color: #404040;
+  &::after {
+    position: absolute;
+    top: 40%;
+    right: 0px;
+    content: '';
+    width: 39px;
+    height: 1px;
+    background-color: $mainColor;
+  }
+}
+//====================================================================================================
+.footer {
+		// .footer__content
+		&__content {
+      position: relative;
+      padding: 0px 215px 100px 215px;
+		}
+		// .footer__title
+		&__title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 119px;
+      padding: 29px 0 9px;
+      font-weight: 500;
+      font-size: 125.254px;
+      line-height: 137.1%;
+      border-top: 1px solid #313636;
+      border-bottom: 1px solid #313636;
+		}
+		// .footer__body
+		&__body {
+      display: flex;
+      justify-content: space-between;
+		}
+		// .footer__column
+		&__column {
+      display: inline-flex;
+      flex-direction: column;
+			// .footer__column_l
+			&_l {
+        flex: 0 0 465 / 1324 * 100%;
+        gap: 18px;
+			}
+			// .footer__column_contact
+			&_contact {
+        gap: 31px;
+        flex: 0 0 219px;
+			}
+			// .footer__column_schedule
+			&_schedule {
+        gap: 31px;
+			}
+			// .footer__column_socials
+			&_socials {
+        gap: 31px;
+			}
+		}
+		// .footer__logo
+		&__logo {
+		}
+		// .footer__cr
+		&__cr {
+      font-size: 18px;
+      line-height: 154.1%;
+      color: #404040;
+		}
+}
+
+.column-footer {
+		// .column-footer__title
+		&__title {
+      font-weight: 500;
+      font-size: 19px;
+      line-height: 140%;
+      text-transform: uppercase;
+		}
+		// .column-footer__list
+		&__list {
+		}
+		// .column-footer__item
+		&__item {
+		}
+		// .column-footer__link
+		&__link {
+      display: inline-block;
+      font-size: 19px;
+      line-height: 137.1%;
+      color: #404040;
+      transition: all 0.3s ease 0s;
+      &:hover {
+        color: $mainColor;
+        text-decoration: underline;
+      }
+      &:active {
+        color: $mainColor;
+      }
+      // .column-footer__link_location
+      &_location {
+        margin-bottom: 30px;
+      }
+      // .column-footer__link_black
+      &_medium {
+        font-weight: 500;
+      }
+		}
+		// .column-footer__schedule
+		&__schedule {
+      font-size: 19px;
+      line-height: 137.1%;
+      color: #404040;
+		}
+}
+//====================================================================================================
+
