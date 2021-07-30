@@ -1,28 +1,28 @@
 //<ОСНОВНОЙ БЛОК>====================================================================================================
 ._h1 {
   font-weight: 500;
-  font-size: 200px;
+  @include adaptiv-font(200, 60, 1);
   line-height: 85%;
 }
 ._h2 {
   font-weight: 500;
-  font-size: 90px;
+  @include adaptiv-font(90, 45, 1);
   line-height: 84%;
 }
 ._logo {
-  font-family: GothicA1;
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 119.6%;
-  color: $mainColor;
+  // font-family: GothicA1;
+  // font-weight: 700;
+  // font-size: 30px;
+  // line-height: 119.6%;
+  // color: $mainColor;
 }
 ._section-title {
   display: flex;
   flex-direction: row-reverse;
   justify-content: flex-end;
   align-items: center;
-  margin-bottom: 48px;
-  font-size: 20px;
+  @include adaptiv-value("margin-bottom", 48, 20, 1);
+  @include adaptiv-font(20, 16, 1);
   line-height: 24px;
   color: #636363;
   &::before {
@@ -39,7 +39,7 @@
   justify-content: flex-end;
   align-items: baseline;
   font-weight: 500;
-  font-size: 22px;
+  @include adaptiv-font(22, 18, 1);
   line-height: 84%;
   color: #404040;
   &::after {
@@ -234,7 +234,7 @@ body.ie {
 	overflow: hidden;
 	height: 0;
   margin-bottom: 134px;
-	padding-bottom: 38.646%;
+	padding-bottom: 42.6045%;
   background-color: #E0E0E0;
 	video,
 	iframe,
