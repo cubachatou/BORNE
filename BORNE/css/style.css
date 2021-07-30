@@ -649,7 +649,7 @@ textarea.input {
 }
 
 ._h1,
-.welcome__content div:first-child h1 {
+.welcome__textarea h1 {
   font-weight: 500;
   font-size: 200px;
   line-height: 85%;
@@ -900,13 +900,11 @@ ol.counter li:before {
   width: 100%;
 }
 
-._ibg,
-.welcome__content div:last-child {
+._ibg {
   position: relative;
 }
 
-._ibg img,
-.welcome__content div:last-child img {
+._ibg img {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -916,17 +914,13 @@ ol.counter li:before {
      object-fit: cover;
 }
 
-body.ie ._ibg,
-body.ie .welcome__content div:last-child,
-.welcome__content body.ie div:last-child {
+body.ie ._ibg {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-body.ie ._ibg img,
-body.ie .welcome__content div:last-child img,
-.welcome__content body.ie div:last-child img {
+body.ie ._ibg img {
   width: 0;
   height: 0;
   opacity: 0;
@@ -1103,7 +1097,7 @@ body.ie .welcome__content div:last-child img,
 }
 
 .menu__logo {
-  margin-right: 207px;
+  margin-right: 107px;
 }
 
 .menu__body {
@@ -1337,12 +1331,8 @@ footer {
           flex: 1 1 auto;
 }
 
-.welcome {
-  position: relative;
-  margin-bottom: 135px;
-}
-
 .welcome__content {
+  margin-bottom: 135px;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1350,14 +1340,16 @@ footer {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.welcome__content div:first-child {
+.welcome__textarea {
   z-index: 1;
   position: absolute;
-  top: 261px;
   left: 215px;
-  max-width: 715px;
+  height: 100%;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -1365,16 +1357,19 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
 }
 
-.welcome__content div:first-child h1 {
+.welcome__textarea h1 {
   margin-left: -8px;
 }
 
-.welcome__content div:first-child p {
+.welcome__textarea p {
   margin-bottom: 45px;
   max-width: 536px;
   font-size: 22px;
@@ -1383,7 +1378,7 @@ footer {
   text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
 }
 
-.welcome__content div:first-child a {
+.welcome__textarea a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1402,24 +1397,19 @@ footer {
   transition: all 0.3s ease 0s;
 }
 
-.welcome__content div:first-child a:hover {
+.welcome__textarea a:hover {
   background-color: #000;
 }
 
-.welcome__content div:last-child {
-  width: 81.8604651163%;
+.welcome__img-wrapper {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 81.8604651163%;
+          flex: 0 0 81.8604651163%;
   padding-top: 50%;
 }
 
 .welcome__socials {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
-  right: 41px;
-  height: 197px;
-  width: 18.08px;
+  width: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1427,20 +1417,40 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 45px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .welcome__socials a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: transparent;
   font-size: 17px;
   color: #808080;
-  -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
+  -webkit-transition: color 0.3s ease 0s, background-color 0.3s ease 0s;
+  -o-transition: color 0.3s ease 0s, background-color 0.3s ease 0s;
+  transition: color 0.3s ease 0s, background-color 0.3s ease 0s;
+}
+
+.welcome__socials a:not(:last-child) {
+  margin-bottom: 28px;
 }
 
 .welcome__socials a:hover,
 .welcome__socials a:active {
-  color: #000;
+  color: #fff;
+  background-color: #000;
 }
 
 .welcome__progressbar {
@@ -1448,7 +1458,6 @@ footer {
   display: block;
   top: 27%;
   left: 15px;
-  display: block;
   width: 2px;
   height: 396.26px;
   background-color: #E1E1E1;
@@ -1457,7 +1466,7 @@ footer {
 .welcome__progressbar span {
   display: block;
   width: 100%;
-  height: 131.33px;
+  height: 33.06%;
   background-color: #000;
 }
 
@@ -1661,7 +1670,7 @@ footer {
 
 .services__link:hover,
 .services__link:active {
-  background-color: #D3D3D3;
+  background-color: #fff;
   color: #000;
 }
 
@@ -1670,7 +1679,7 @@ footer {
 }
 
 .showcase__content {
-  padding: 0 215px 0 215px;
+  max-width: 1350px;
 }
 
 .header-showcase {
@@ -1813,7 +1822,7 @@ footer {
 }
 
 .insights__content {
-  padding: 0px 215px 0px 215px;
+  max-width: 1350px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1937,6 +1946,19 @@ footer {
   }
 }
 
+@media (min-width: 1920px) {
+  .welcome__socials {
+    position: absolute;
+    right: -85px;
+  }
+}
+
+@media (max-width: 1919.98px) {
+  .welcome__textarea {
+    left: 115px;
+  }
+}
+
 @media (max-width: 1762px) {
   .footer__title {
     -webkit-box-pack: center;
@@ -1948,7 +1970,7 @@ footer {
 
 @media (max-width: 1750px) {
   ._h1,
-  .welcome__content div:first-child h1 {
+  .welcome__textarea h1 {
     font-size: calc(60px + 140 * ((100vw - 320px) / 1430));
   }
 
@@ -1977,7 +1999,7 @@ footer {
   }
 
   .menu__logo {
-    margin-right: calc(0px + 207 * ((100vw - 320px) / 1430));
+    margin-right: calc(0px + 107 * ((100vw - 320px) / 1430));
   }
 
   .menu__body ul li:nth-child(1) {
@@ -2068,8 +2090,24 @@ footer {
     font-size: calc(12px + 7 * ((100vw - 320px) / 1430));
   }
 
-  .welcome {
+  .welcome__content {
     margin-bottom: calc(30px + 105 * ((100vw - 320px) / 1430));
+  }
+
+  .welcome__socials {
+    width: calc(0px + 100 * ((100vw - 320px) / 1430));
+  }
+
+  .welcome__socials a:not(:last-child) {
+    margin-bottom: calc(10px + 18 * ((100vw - 320px) / 1430));
+  }
+
+  .welcome__socials a {
+    font-size: calc(14px + 3 * ((100vw - 320px) / 1430));
+  }
+
+  .welcome__progressbar {
+    height: calc(100px + 296.26 * ((100vw - 320px) / 1430));
   }
 
   .about-us__column_l h2 {
