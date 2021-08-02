@@ -1,20 +1,15 @@
 //<ОСНОВНОЙ БЛОК>====================================================================================================
 ._h1 {
   font-weight: 500;
-  @include adaptiv-font(200, 60, 1);
+  @include adaptiv-font(200, 45, 1);
   line-height: 85%;
 }
 ._h2 {
   font-weight: 500;
-  @include adaptiv-font(90, 45, 1);
+  @include adaptiv-font(90, 35, 1);
   line-height: 84%;
 }
 ._logo {
-  // font-family: GothicA1;
-  // font-weight: 700;
-  // font-size: 30px;
-  // line-height: 119.6%;
-  // color: $mainColor;
 }
 ._section-title {
   display: flex;
@@ -66,20 +61,31 @@
 }
 ._promotion {
   position: absolute;
-  bottom: 57px;
-  left: 100px;
+  @include adaptiv-value("bottom", 57, 0, 1);
+  @include adaptiv-value("left", 100, 0, 1);
   display: flex;
   flex-direction: column;
   padding: 24px 47px 24px 21px;
   background-color:rgba(255, 255, 255, 0.94);
+  @media (max-width: $md2+px) {
+    padding: 15px 20px;
+  }
+  @media (max-width: $md3+px) {
+    padding: 10px 15px;
+    left: 10px;
+    bottom: 10px;
+  }
+  @media (max-width: $md4+px) {
+    padding: 8px 8px;
+  }
   &__title {
     margin-bottom: 4px;
-    font-size: 26px;
+    @include adaptiv-font(26, 12, 1);
     line-height: 99.6%;
     color: $mainColor;
   }
   &__sub-title {
-    font-size: 14px;
+    @include adaptiv-font(14, 9, 1);
     line-height: 99.6%;
     text-transform: uppercase;
     color: #626161;
@@ -89,12 +95,12 @@
   display: flex;
   flex-direction: column;
   & span {
-    margin-bottom: 31px;
-    font-size: 54px;
+    @include adaptiv-value("margin-bottom", 31, 15, 1);
+    @include adaptiv-font(54, 30, 1);
     color: #AEAEAE;
   }
   & p {
-    margin-bottom: 47px;
+    @include adaptiv-value("margin-bottom", 47, 20, 1);
     font-weight: 300;
     font-size: 22px;
     line-height: 128%;
@@ -105,6 +111,7 @@
     display: flex;
     flex-direction: column;
     gap: 5px;
+    margin-top: auto;
     padding-left: 63px;
     &::before {
       position: absolute;
@@ -233,7 +240,7 @@ body.ie {
 	position: relative;
 	overflow: hidden;
 	height: 0;
-  margin-bottom: 134px;
+  @include adaptiv-value("margin-bottom", 134, 30, 1);
 	padding-bottom: 42.6045%;
   background-color: #E0E0E0;
 	video,
