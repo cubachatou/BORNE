@@ -136,6 +136,20 @@
     }
   }
 }
+._page-title {
+  margin-bottom: 21px;
+  max-width: 656px;
+  @include adaptiv-font(110, 55, 1);
+  line-height: 85%;
+}
+._page-subtitle {
+  @include adaptiv-value("margin-bottom", 137, 30, 1);
+  max-width: 656px;
+  font-weight: 300;
+  @include adaptiv-font(34, 24, 1);
+  line-height: 130%;
+  color: #404040;
+}
 //</ОСНОВНОЙ БЛОК>====================================================================================================
 
 //<ГОТОВЫЕ КЛАССЫ>====================================================================================================

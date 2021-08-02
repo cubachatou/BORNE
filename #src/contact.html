@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('_head.html',{
+	"title":"Контакты"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('_header.html',{})
+			<main class="page contact">
+        <section class="contact__content _container">
+          <h1 class="contact__title _page-title">Contact <br> with us.</h1>
+          <p class="contact__sub-title _page-subtitle">Guman lay on his armour like back and if he lifted</p>
+          <div class="contact__head head-contact">
+            <div class="head-contact__col head-contact__col_l">
+              <h2 class="head-contact__title">Any enquiries? Get in touch now.</h2>
+            </div>
+            <div class="head-contact__col head-contact__col_r">
+              <div class="head-contact__item head-contact__item_l">
+                <a href="#" class="head-contact__location">Hung a picture that he had recently cut out of an illustrated magazin London</a>
+                <span><b>Time:</b>&nbsp;<a>9:30 AM 5:30PM</a></span>
+                <span><b>Phone:</b>&nbsp;<a href="tel:+#">+55 (997) 2354-8798</a></span>
+                <span><b>Email:</b>&nbsp;<a href="mailto:#">demo@ecample.com</a></span>
+              </div>
+              <div class="head-contact__item head-contact__item_r">
+                <a href="#" class="head-contact__location">About helplessly as he looked what's happened to me he thought</a>
+                <span><b>Time:</b>&nbsp;<a>9:30 AM 5:30PM</a></span>
+                <span><b>Phone:</b>&nbsp;<a href="tel:+#">+55 (997) 2354-8798</a></span>
+                <span><b>Email:</b>&nbsp;<a href="mailto:#">demo@ecample.com</a></span>
+              </div>
+            </div>
+          </div>
+          <div class="contact__body body-contact">
+            <div class="body-contact__col body-contact__col_l">
+              <form action="#" class="form contact__form">
+                <div class="form__row">
+                  <div class="form__line">
+                    <label for="name">Name*</label>
+                    <input id="name" autocomplete="off" type="text" name="form[]" data-error="Ошибка" data-value="" class="input">
+                  </div>
+                  <div class="form__line">
+                    <label for="email">Email*</label>
+                    <input id="email" autocomplete="off" type="text" name="form[]" data-error="Ошибка" data-value="" class="input">
+                  </div>
+                </div>
+                <div class="form__column">
+                  <label for="textarea">Message*</label>
+                  <textarea id="textarea" name="form[]" id="" cols="30" rows="10"></textarea>
+                </div>
+                <button type="submit" class="form__buttton">Send it now</button>
+              </form>
+            </div>
+            <div class="body-contact__col body-contact__col_r _ibg">
+              <img src="img/1920x818.svg" alt="">
+            </div>
+          </div>
+        </section>
+			</main>
+			@@include('_footer.html',{})
+		</div>
+		<!-- @@include('_popup.html',{}) -->
+		@@include('_js.html',{})
+	</body>
+</html>

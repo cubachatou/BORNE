@@ -705,6 +705,93 @@ body {
 }
 //</INSIGHTS>===========================================================================
 
+//<CONTACT>=============================================================================
+.contact {
+  @include adaptiv-value("padding-top", 125, 30, 1);
+  @include adaptiv-value("padding-bottom", 135, 30, 1);
+		// .contact__content
+		&__content {
+      max-width: 1350px;
+		}
+		// .contact__title
+		&__title {
+		}
+		// .contact__sub-title
+		&__sub-title {
+		}
+}
+.head-contact {
+  display: flex;
+  justify-content: space-between;
+  @include adaptiv-value("margin-bottom", 128, 30, 1);
+		// .head-contact__col
+		&__col {
+			// .head-contact__col_l
+			&_l {
+        flex: 0 0 470 / 1320 * 100%;
+			}
+			// .head-contact__col_r
+			&_r {
+        flex: 0 0 650 / 1320 * 100%;
+        display: flex;
+        justify-content: space-between;
+			}
+		}
+		// .head-contact__title
+		&__title {
+      font-size: 80px;
+      line-height: 84%;
+		}
+		// .head-contact__item
+		&__item {
+      display: flex;
+      flex-direction: column;
+      &_l {
+        flex: 0 0 297 / 650 * 100%;
+      }
+      &_r {
+        flex: 0 0 270 / 650 * 100%;
+      }
+      & span {
+        font-size: 18px;
+        line-height: 142%;
+        & b {
+          font-weight: 500;
+          color: $mainColor;
+        }
+        & a {
+          color: #404040;
+        }
+      }
+		}
+		// .head-contact__location
+		&__location {
+      margin-bottom: 28px;
+      font-size: 18px;
+      line-height: 131.5%;
+      color: #404040;
+		}
+}
+.body-contact {
+  display: flex;
+  justify-content: space-between;
+		// .body-contact__col
+		&__col {
+			// .body-contact__col_l
+			&_l {
+        flex: 0 0 648 / 1320 * 100%;
+        display: flex;
+        flex-direction: column;
+			}
+			// .body-contact__col_r
+			&_r {
+        flex: 0 0 614 / 1320 * 100%;
+			}
+		}
+}
+//</CONTACT>============================================================================
+
+
 
 
 
